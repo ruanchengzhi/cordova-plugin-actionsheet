@@ -1,13 +1,12 @@
 {
   "name": "cordova-plugin-actionsheet",
-  "version": "2.3.3",
+  "version": "3.0.0",
   "description": "Show a sheet of options the user can choose from.",
   "cordova": {
     "id": "cordova-plugin-actionsheet",
     "platforms": [
       "ios",
-      "android",
-      "wp8"
+      "android"
     ]
   },
   "repository": {
@@ -25,19 +24,18 @@
     "cordova",
     "ecosystem:cordova",
     "cordova-ios",
-    "cordova-android",
-    "cordova-wp8"
+    "cordova-android"
   ],
   "engines": [
     {
       "name": "cordova",
-      "version": ">=3.0.0"
+      "version": ">=6.0.0"
     }
   ],
-  "author": "Eddy Verbruggen - @EddyVerbruggen",
+  "author": "ruanchengzhi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EddyVerbruggen/cordova-plugin-actionsheet/issues"
+    "url": "https://github.com/ruanchengzhi/cordova-plugin-actionsheet/issues"
   },
-  "homepage": "https://github.com/EddyVerbruggen/cordova-plugin-actionsheet#readme"
+  "homepage": "https://github.com/ruanchengzhi/cordova-plugin-actionsheet#readme"
 }

@@ -1,3 +1,4 @@
+var exec = require('cordova/exec');
 function ActionSheet() {
 }
 
@@ -17,14 +18,6 @@ ActionSheet.prototype.ANDROID_THEMES = {
   THEME_DEVICE_DEFAULT_LIGHT : 5
 };
 
-ActionSheet.install = function () {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
 
-  window.plugins.actionsheet = new ActionSheet();
-
-  return window.plugins.actionsheet;
-};
-
-cordova.addConstructor(ActionSheet.install);
+var actionsheet = new ActionSheet();
+module.exports = actionsheet;

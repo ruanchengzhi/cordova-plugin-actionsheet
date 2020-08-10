@@ -34,11 +34,6 @@ Android
 <img src="screenshots/android/android-delete.png" width="235"/>&nbsp;
 <img src="screenshots/android/android-logout.png" width="235"/>
 
-Windows Phone 8
-
-<img src="screenshots/wp8/wp8-share.jpg" width="235"/>&nbsp;
-<img src="screenshots/wp8/wp8-delete.jpg" width="235"/>&nbsp;
-<img src="screenshots/wp8/wp8-logout.jpg" width="235"/>
 
 ## 3. Installation
 
@@ -80,7 +75,7 @@ Also, wait for `deviceready` to fire before using plugins in general!
 
   function testShareSheet() {
     var options = {
-        androidTheme: window.plugins.actionsheet.ANDROID_THEMES.THEME_DEVICE_DEFAULT_LIGHT, // default is THEME_TRADITIONAL
+        androidTheme: cordova.plugins.actionsheet.ANDROID_THEMES.THEME_DEVICE_DEFAULT_LIGHT, // default is THEME_TRADITIONAL
         title: 'What do you want with this image?',
         subtitle: 'Choose wisely, my friend', // supported on iOS only
         buttonLabels: ['Share via Facebook', 'Share via Twitter'],
@@ -93,7 +88,7 @@ Also, wait for `deviceready` to fire before using plugins in general!
     };
     // Depending on the buttonIndex, you can now call shareViaFacebook or shareViaTwitter
     // of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
-    window.plugins.actionsheet.show(options, callback);
+    cordova.plugins.actionsheet.show(options, callback);
   };
 
   function testDeleteSheet() {
@@ -101,7 +96,7 @@ Also, wait for `deviceready` to fire before using plugins in general!
         'addCancelButtonWithLabel': 'Cancel',
         'addDestructiveButtonWithLabel' : 'Delete note'
     };
-    window.plugins.actionsheet.show(options, callback);
+    cordova.plugins.actionsheet.show(options, callback);
   };
 
   function testLogoutSheet() {
@@ -111,7 +106,7 @@ Also, wait for `deviceready` to fire before using plugins in general!
         'winphoneEnableCancelButton' : true, // default false
         'addCancelButtonWithLabel': 'Cancel'
     };
-    window.plugins.actionsheet.show(options, callback);
+    cordova.plugins.actionsheet.show(options, callback);
   };
 ```
 
@@ -122,8 +117,8 @@ On iOS, you can also position the actionSheet origin by adding `position: [100, 
 If for some reason you want to hide the actionsheet programmatically, do this:
 ```js
   // options and callbacks are optional, so either approach will work:
-  window.plugins.actionsheet.hide();
-  window.plugins.actionsheet.hide({}, onSuccess, onError);
+  cordova.plugins.actionsheet.hide();
+  cordova.plugins.actionsheet.hide({}, onSuccess, onError);
 ```
 
 ## 5. Credits
@@ -133,12 +128,7 @@ Android code: mostly [Brill Papping](https://github.com/bpappin)
 
 
 ## 6. Change history
-* 2.3.3 Default iPad popup is now in the center (was in the top left corner)
-* 2.3.1 Added `subtitle` (iOS) and `destructiveButtonLast` preferences. Also, iOS now uses the newer `UIAlertController` instead of `UIActionSheet`.
-* 2.2.2 OK, 2.2.1 has issues with Russian and the like, so reverted. Just add `<meta charset="utf-8" />` to your html file.
-* 2.2.1 Encoding of diacritical characters fixed on iOS, so you can now use `Español` as a title or button label.
-* 1.1.6 You can now set the iOS actionSheet origin position (uses the iOS `actionSheet.showFromRect` method)
-* 1.1.2 You can now select a theme for your Android popup, see the first example above
+3.0.0 form from  EddyVerbruggen/cordova-plugin-actionsheet ,fix bug to fit new ios version.
 
 ## 7. License
 
